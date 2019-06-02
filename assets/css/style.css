@@ -1,0 +1,49 @@
+body{
+  background-color:lightcyan;
+}
+.header {
+  color: red;
+  background-color:black;
+
+  
+}
+.instructions{
+  background-color: salmon;
+  width: 50vw;
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: green;
+
+}
+#target{
+  background-color: plum;
+  height: 65px;
+  margin-right: 20px;
+  margin-left:12px;
+  text-align:center;
+
+
+}
+#status{
+  background-color:yellow;
+  margin-right: 20px;
+  text-align: center;
+ 
+
+}
+img{
+  width: 100px;
+  margin-top: 25px;
+  margin-right: 10px;
+  padding: 10px;
+}
+.info-box{
+  background-color: peachpuff;
+  width: 50vw;
+}
+.score-box{
+  background-color:teal;
+  height: 100px;
+  width: 25vw;
+}
