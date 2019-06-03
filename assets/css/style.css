@@ -1,6 +1,9 @@
 body{
   background-color:lightcyan;
 }
+.container{
+  height: 80vh;
+}
 .header {
   color: red;
   background-color:black;
@@ -44,6 +47,6 @@ img{
 }
 .score-box{
   background-color:teal;
-  height: 100px;
-  width: 25vw;
+  height: 10vh;
+  width: 10vw;
 }
