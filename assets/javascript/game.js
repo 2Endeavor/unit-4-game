@@ -19,15 +19,40 @@ console.log("I see you :-)");
       // The number of wins and losses are tracked by the following variables
       var wins= 0; 
       var loss = 0;
-      
-      
+      target()
+      startGame();
       //============Functions=============
       //initializes all the variables for the game
       function startGame (){
-
-
+        target();
+        crystalValue();
 
       }
+
+      // This function determines the value of each crystal
+
+      function crystalValue(){
+        redStone =Math.floor((Math.random()*12)+1);
+
+        blueStone =Math.floor((Math.random()*12)+1);
+
+        yellowStone =Math.floor((Math.random()*12)+1);
+
+        greenStone =Math.floor((Math.random()*12)+1);
+        
+        console.log(redStone,blueStone, yellowStone,greenStone);
+       
+      }
+
+
+      // This function selects a random number between 19-120 and stores the number to the variable targetNumber
+      function target(){
+        targetNumber=Math.floor((Math.random()*101)+19);
+        
+
+      }
+
+
       // This function listens for a player to click a crystal
       function onclick(){
 
