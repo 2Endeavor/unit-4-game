@@ -9,7 +9,7 @@ $(document).ready(function () {
 
   //The following variables track the score the user is trying to match and the player's current score 
   var targetNumber;  // This is the number the player is trying to reach
-  var totalScore = 0;  //Players accumulated score during the day
+  var totalScore = 0;  //Players accumulated score during the play
 
   // The random value of each crystal is stored to the following variables
   var redStone = 0;
@@ -53,6 +53,7 @@ $(document).ready(function () {
   //============Functions=============
   //initializes all the variables for the game
   function startGame() {
+    totalScore=0;
     target();
     crystalValue();
 
@@ -75,45 +76,51 @@ $(document).ready(function () {
 
   }
 
-  console.log(`outside of the target function ${targetNumber}`);
+
 
   TODO: // targetNumber is giving me two values when console log is taken before and after the function. The value of targetNumber should be constant during the round
-  // This function selects a random number between 19-120 and stores the number to the variable targetNumber
+  // This function selects a random number between 19-120 and stores the number to the variable targetNumber and add the number to the screen
   function target() {
     targetNumber = Math.floor(Math.random() * 101) + 19;
-    // add the target number to the screen
-   
+    $("#currentTarget").text(targetNumber);
+  
     
-    console.log(`inside of the target function ${targetNumber}`);
-
-
 
   }
 
 
 
   // this function calculates the player's score by taking in the crystals value and adding it to the players current score--Tested and it works! :)
-   function calculateScore(points) {
-     totalScore=totalScore+points;
-     gameStatus(totalPoints);
+   
+  function calculateScore(points) {
+    totalScore
+    totalScore=totalScore+points;
+    $("#score-box").text(totalScore);
+     gameStatus(totalScore);
     
-   }
-
-  TODO: //This isn't working
-  // This function determines if the player has won, loss or if the game will continue
-  function gameStatus(pointsAccumulated) {
-    targetNumber
-    if(pointsAccumulated=targetNumber){
-      alert ("you win!");
-
-    }else if (pointsAccumulated>targetNumber){
-      alert ("you lose-sorry :(");
-
-    }else(pointsAccumulated<targetNumber){
-      alert ("Lucky you, you get to keep playing");
-
-    };
   }
+
+  
+   //This isn't working
+  // This function determines if the player has won, loss or if the game will continue
+   function gameStatus(pointsAccumulated) {
+     targetNumber
+     if(pointsAccumulated===targetNumber){
+      wins++
+      $("#status").text(`Wins: ${wins}`);
+      startGame();
+
+     }else if (pointsAccumulated>targetNumber){
+      loss++
+       $("#status").text(`Loss: ${loss}`);
+       startGame();
+
+     }else{
+     ;
+      
+
+    }
+   }
 
   // function to notify user of game result. update the wins and losses
 

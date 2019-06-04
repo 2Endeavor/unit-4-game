@@ -45,7 +45,7 @@ img{
   background-color: peachpuff;
   width: 50vw;
 }
-.score-box{
+#score-box{
   background-color:teal;
   height: 10vh;
   width: 10vw;
