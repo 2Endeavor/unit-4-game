@@ -19,12 +19,38 @@ p{
   color: green;
 
 }
-#target{
+#currentTarget{
   background-color: plum;
-  height: 65px;
-  margin-right: 20px;
-  margin-left:12px;
-  text-align:center;
+  height: 10vh;
+  width: 10vw;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+
+
+}
+#win-box{
+  background-color: plum;
+  height: 10vh;
+  width: 10vw;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  margin-left: 10px;
+
+
+}
+#loss-box{
+  background-color: plum;
+  height: 10vh;
+  width: 10vw;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  margin-left: 10px;
 
 
 }
@@ -42,11 +68,17 @@ img{
   padding: 10px;
 }
 .info-box{
-  background-color: peachpuff;
-  width: 50vw;
+  /* background-color: peachpuff; */
+  width: 20vw;
+  font-size: 50px;
 }
 #score-box{
   background-color:teal;
   height: 10vh;
   width: 10vw;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  
 }

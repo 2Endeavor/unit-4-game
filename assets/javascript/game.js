@@ -20,7 +20,7 @@ $(document).ready(function () {
   // The number of wins and losses are tracked by the following variables
   var wins = 0;
   var loss = 0;
-  target()
+  target();
   startGame();
 
   // =========Add Event Listeners-Tested and it works :)
@@ -77,12 +77,11 @@ $(document).ready(function () {
   }
 
 
-
-  TODO: // targetNumber is giving me two values when console log is taken before and after the function. The value of targetNumber should be constant during the round
-  // This function selects a random number between 19-120 and stores the number to the variable targetNumber and add the number to the screen
+  //This function selects a random number between 19-120 and stores the number to the variable targetNumber and add the number to the screen
   function target() {
-    targetNumber = Math.floor(Math.random() * 101) + 19;
-    $("#currentTarget").text(targetNumber);
+   targetNumber = Math.floor(Math.random() * 101) + 19;
+
+    $("#currentTarget").text(`Target Number:  ${targetNumber}`);
   
     
 
@@ -90,30 +89,35 @@ $(document).ready(function () {
 
 
 
-  // this function calculates the player's score by taking in the crystals value and adding it to the players current score--Tested and it works! :)
+  // This function calculates the player's score by taking in the crystals value and adding it to the players current score--Tested and it works! :)
    
   function calculateScore(points) {
     totalScore
     totalScore=totalScore+points;
-    $("#score-box").text(totalScore);
+    $("#score-box").text(`Sum:  ${totalScore}`);
      gameStatus(totalScore);
     
   }
 
   
-   //This isn't working
+// TODO: Need to announce when a player has won or loss a round
   // This function determines if the player has won, loss or if the game will continue
    function gameStatus(pointsAccumulated) {
      targetNumber
+     wins
+     loss
      if(pointsAccumulated===targetNumber){
       wins++
-      $("#status").text(`Wins: ${wins}`);
+      $("#win-box").text(`Wins: ${wins}`);
       startGame();
+      
 
      }else if (pointsAccumulated>targetNumber){
       loss++
-       $("#status").text(`Loss: ${loss}`);
+       $("#loss-box").text(`Loss: ${loss}`);
+       $("#info-box").text(`Sorry you lose :()`)
        startGame();
+       console.log(loss);
 
      }else{
      ;
@@ -122,7 +126,7 @@ $(document).ready(function () {
     }
    }
 
-  // function to notify user of game result. update the wins and losses
+
 
   // Reset for new game
 
